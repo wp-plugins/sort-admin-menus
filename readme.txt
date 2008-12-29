@@ -9,7 +9,7 @@ Sorts the items in the "Manage", "Settings" and "Plugins" menus in alphabetical 
 
 == Description ==
 
-This plugin sorts the items in the "Manage", "Settings" and "Plugins" dashboard menus in alphabetical order. Useful when you have lots of plugins installed and very cluttered menus as a result. The plugin should work well with most "drop-down menu" plugins and other visual enhancements.
+This plugin sorts the items in the "Manage"/"Tools", "Settings" and "Plugins" dashboard menus in alphabetical order. Useful when you have lots of plugins installed and very cluttered menus as a result. The plugin should work well with most "drop-down menu" plugins and other visual enhancements.
 
 You can configure which menus are sorted by editing the source code. Yes, hackety-hack :)  
 
