@@ -2,14 +2,14 @@
 Contributors: whiteshadow
 Tags: dashboard, admin, menu, design, interface, usability
 Requires at least: 2.5
-Tested up to: 2.6.2
-Stable tag: 1.0
+Tested up to: 2.7
+Stable tag: 1.1
 
 Sorts the items in the "Manage", "Settings" and "Plugins" menus in alphabetical order. Useful when you have lots of plugins installed and very large, cluttered menus.
 
 == Description ==
 
-This plugin sorts the items in the "Manage", "Settings" and "Plugins" dashboard menus in alphabetical order. Useful when you have lots of plugins installed and very cluttered menus as a result. The plugin should work well with most "drop-down menu" plugins and other visual enhancements.
+This plugin sorts the items in the "Manage"/"Tools", "Settings" and "Plugins" dashboard menus in alphabetical order. Useful when you have lots of plugins installed and very cluttered menus as a result. The plugin should work well with most "drop-down menu" plugins and other visual enhancements.
 
 You can configure which menus are sorted by editing the source code. Yes, hackety-hack :)  
 

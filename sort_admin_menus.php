@@ -3,7 +3,7 @@
 Plugin Name: Sort Admin Menus
 Plugin URI: http://w-shadow.com/blog/2008/07/09/wp-plugin-sort-admin-menus/
 Description: Sorts the items in 'Manage', 'Settings' and 'Plugins' menus in alphabetic order.
-Version: 1.0
+Version: 1.1
 Author: Janis Elsts
 Author URI: http://w-shadow.com/blog/
 */
@@ -15,15 +15,19 @@ It's GPL.
 
 //The hook function that does the sorting
 function sort_dashboard_menu(){
-	global $menu, $submenu;
+	global $menu, $submenu, $wp_version;
 	
 	function comparator($a, $b){
 		return strcasecmp($a[0], $b[0]);
 	}
 	
 	//List any menus you want sorted. Each filename corresponds to what you'd
-	//see in the address bar after clicking a top-level menu item. 
-	$menus_to_sort = array('edit.php', 'options-general.php', 'plugins.php');
+	//see in the address bar after clicking a top-level menu item.
+	if (  function_exists('register_uninstall_hook') ) {
+		$menus_to_sort = array('tools.php', 'options-general.php', 'plugins.php');
+	} else {
+		$menus_to_sort = array('edit.php', 'options-general.php', 'plugins.php');
+	}
 	
 	//This loop is PHP4-compatible. Yay!
 	foreach ($submenu as $key => $items){
@@ -33,6 +37,12 @@ function sort_dashboard_menu(){
 	}
 }
 
-//Set up the hook. It should run before any CSS menu plugins, so it gets the unusual "-1" priority. 
-add_action('dashmenu', 'sort_dashboard_menu', -1);
+//Set up the hook.  
+if ( function_exists('register_uninstall_hook') ){
+	//It should run after all the other hooks, so it gets a late priority.
+	add_action('admin_menu', 'sort_dashboard_menu', 99990);
+} else {
+	//It should run before any CSS menu plugins, so it gets the unusual "-1" priority.
+	add_action('dashmenu', 'sort_dashboard_menu', -1);
+}
 ?>
