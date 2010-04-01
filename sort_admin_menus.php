@@ -24,9 +24,9 @@ function sort_dashboard_menu(){
 	//List any menus you want sorted. Each filename corresponds to what you'd
 	//see in the address bar after clicking a top-level menu item.
 	if (  function_exists('register_uninstall_hook') ) {
-		$menus_to_sort = array('tools.php', 'options-general.php', 'plugins.php');
+		$menus_to_sort = array('tools.php', 'options-general.php');
 	} else {
-		$menus_to_sort = array('edit.php', 'options-general.php', 'plugins.php');
+		$menus_to_sort = array('edit.php', 'options-general.php');
 	}
 	
 	//This loop is PHP4-compatible. Yay!
