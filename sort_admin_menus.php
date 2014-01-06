@@ -3,7 +3,7 @@
 Plugin Name: Sort Admin Menus
 Plugin URI: http://w-shadow.com/blog/2008/07/09/wp-plugin-sort-admin-menus/
 Description: Sorts the items in 'Manage', 'Settings' and 'Plugins' menus in alphabetic order.
-Version: 1.1
+Version: 1.2
 Author: Janis Elsts
 Author URI: http://w-shadow.com/blog/
 */
@@ -23,7 +23,7 @@ function sort_dashboard_menu(){
 	
 	//List any menus you want sorted. Each filename corresponds to what you'd
 	//see in the address bar after clicking a top-level menu item.
-	if (  function_exists('register_uninstall_hook') ) {
+	if ( function_exists('register_uninstall_hook') ) {
 		$menus_to_sort = array('tools.php', 'options-general.php');
 	} else {
 		$menus_to_sort = array('edit.php', 'options-general.php');
@@ -45,4 +45,3 @@ if ( function_exists('register_uninstall_hook') ){
 	//It should run before any CSS menu plugins, so it gets the unusual "-1" priority.
 	add_action('dashmenu', 'sort_dashboard_menu', -1);
 }
-?>
