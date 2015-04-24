@@ -3,7 +3,7 @@
 Plugin Name: Sort Admin Menus
 Plugin URI: http://w-shadow.com/blog/2008/07/09/wp-plugin-sort-admin-menus/
 Description: Sorts the items in 'Manage', 'Settings' and 'Plugins' menus in alphabetic order.
-Version: 1.2.1
+Version: 1.2.2
 Author: Janis Elsts
 Author URI: http://w-shadow.com/blog/
 */

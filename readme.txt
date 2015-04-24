@@ -2,8 +2,8 @@
 Contributors: whiteshadow
 Tags: dashboard, admin, menu, design, interface, usability
 Requires at least: 2.5
-Tested up to: 4.1
-Stable tag: 1.2.1
+Tested up to: 4.2
+Stable tag: 1.2.2
 
 Sorts the items in the "Manage", "Settings" and "Plugins" menus in alphabetical order. Useful when you have lots of plugins installed and very large, cluttered menus.
 
